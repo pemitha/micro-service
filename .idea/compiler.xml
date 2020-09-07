@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="CurrencyService" />
+        <module name="CurrencyRateService" />
+        <module name="config-service" />
+        <module name="common-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common-service" target="1.8" />
+      <module name="config-service" target="1.8" />
+      <module name="CurrencyRateService" target="1.8" />
+      <module name="CurrencyService" target="1.8" />
+      <module name="micro-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="CurrencyRateService" options="-parameters" />
+      <module name="CurrencyService" options="-parameters" />
+      <module name="common-service" options="-parameters" />
+      <module name="config-service" options="-parameters" />
+    </option>
+  </component>
+</project>
