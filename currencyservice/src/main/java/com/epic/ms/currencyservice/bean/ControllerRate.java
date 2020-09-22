@@ -9,15 +9,17 @@ public class ControllerRate implements Serializable {
  private String toCurrency;
  private BigDecimal exchangeRate;
  private BigDecimal amount;
+ private int port;
 
     public ControllerRate() {
     }
 
-    public ControllerRate(String fromCurrency, String toCurrency, BigDecimal exchangeRate, BigDecimal amount) {
+    public ControllerRate(String fromCurrency, String toCurrency, BigDecimal exchangeRate, BigDecimal amount,int port) {
         this.fromCurrency = fromCurrency;
         this.toCurrency = toCurrency;
         this.exchangeRate = exchangeRate;
         this.amount = amount;
+        this.port = port;
     }
 
     public String getFromCurrency() {
@@ -50,6 +52,14 @@ public class ControllerRate implements Serializable {
 
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
     }
 }
 

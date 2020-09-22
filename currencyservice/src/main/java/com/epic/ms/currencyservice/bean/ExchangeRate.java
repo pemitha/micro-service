@@ -8,14 +8,13 @@ public class ExchangeRate implements Serializable {
  private String fromCurrency;
  private String toCurrency;
  private BigDecimal exchangeRate;
+ private int Port;
 
-    public ExchangeRate(String fromCurrency, String toCurrency, BigDecimal exchangeRate) {
+    public ExchangeRate(String fromCurrency, String toCurrency, BigDecimal exchangeRate, int port) {
         this.fromCurrency = fromCurrency;
         this.toCurrency = toCurrency;
         this.exchangeRate = exchangeRate;
-    }
-
-    public ExchangeRate() {
+        Port = port;
     }
 
     public String getFromCurrency() {
@@ -40,6 +39,14 @@ public class ExchangeRate implements Serializable {
 
     public void setExchangeRate(BigDecimal exchangeRate) {
         this.exchangeRate = exchangeRate;
+    }
+
+    public int getPort() {
+        return Port;
+    }
+
+    public void setPort(int port) {
+        Port = port;
     }
 }
 

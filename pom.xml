@@ -25,6 +25,7 @@
 		<module>config-service</module>
 		<module>currencyrateservice</module>
 		<module>currencyservice</module>
+		<module>naming-server</module>
 	</modules>
 
 </project>

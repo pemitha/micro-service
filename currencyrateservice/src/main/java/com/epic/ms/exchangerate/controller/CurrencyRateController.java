@@ -1,6 +1,7 @@
 package com.epic.ms.exchangerate.controller;
 
 import com.epic.ms.exchangerate.bean.ExchangeRate;
+import com.epic.ms.exchangerate.config.ExchangeRateConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +16,12 @@ public class CurrencyRateController {
     @Autowired
     private Environment environment;
 
+    @Autowired
+    private ExchangeRateConfig exchangeRateConfig;
+
     @GetMapping(value = "exchangeRate/fromCurrency/{fromCurrency}/toCurrency/{toCurrency}")
     public ExchangeRate rate(@PathVariable String fromCurrency, @PathVariable String toCurrency) {
         BigDecimal exchnageRate = new BigDecimal(Double.parseDouble(environment.getProperty("currency.exchange.rate")));
-        return new ExchangeRate(fromCurrency, toCurrency, exchnageRate);
+        return new ExchangeRate(fromCurrency, toCurrency, exchnageRate,exchangeRateConfig.getServerPort());
     }
 }
