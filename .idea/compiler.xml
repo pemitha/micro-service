@@ -2,18 +2,21 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CurrencyService" />
-        <module name="naming-server" />
         <module name="CurrencyRateService" />
-        <module name="config-service" />
         <module name="common-service" />
+        <module name="CurrencyService" />
+        <module name="API_GATEWAY" />
+        <module name="config-service" />
+        <module name="naming-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="API_GATEWAY" target="1.8" />
       <module name="common-service" target="1.8" />
       <module name="config-service" target="1.8" />
       <module name="CurrencyRateService" target="1.8" />
@@ -24,6 +27,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="API_GATEWAY" options="-parameters" />
       <module name="CurrencyRateService" options="-parameters" />
       <module name="CurrencyService" options="-parameters" />
       <module name="common-service" options="-parameters" />

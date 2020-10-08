@@ -26,6 +26,7 @@
 		<module>currencyrateservice</module>
 		<module>currencyservice</module>
 		<module>naming-server</module>
+		<module>API_GATEWAY</module>
 	</modules>
 
 </project>

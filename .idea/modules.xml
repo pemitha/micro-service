@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/API_GATEWAY/API_GATEWAY.iml" filepath="$PROJECT_DIR$/API_GATEWAY/API_GATEWAY.iml" />
       <module fileurl="file://$PROJECT_DIR$/currencyrateservice/CurrencyRateService.iml" filepath="$PROJECT_DIR$/currencyrateservice/CurrencyRateService.iml" />
       <module fileurl="file://$PROJECT_DIR$/currencyservice/CurrencyService.iml" filepath="$PROJECT_DIR$/currencyservice/CurrencyService.iml" />
       <module fileurl="file://$PROJECT_DIR$/common-service/common-service.iml" filepath="$PROJECT_DIR$/common-service/common-service.iml" />
